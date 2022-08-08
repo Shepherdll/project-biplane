@@ -3,12 +3,15 @@ import { useQuery, gql } from "@apollo/client";
 
 
 const EXCHANGE_RATES = gql`
-  query GetExchangeRates {
-    rates(currency: "AUD") {
-      currency
-      rate
-    }
+query GetExchangeRates {
+  rates(currency: "AUD") {
+    currency
+    rate
   }
+  openExchangeRates @rest(type: "openExchangeRates", path: "/latest", endpoint: "openExchangeRate") {
+    rates
+  }
+}
 `;
 
 
