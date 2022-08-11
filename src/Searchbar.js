@@ -67,8 +67,8 @@ export default function Searchbar(props) {
     
     return (
         <div class="project">
-            <h3>{ planeTitle }</h3>
-            <br/>
+            {/* <h3>{ planeTitle }</h3>
+            <br/> */}
             <div>
                 <ReactSearchAutocomplete
                     items={items}
