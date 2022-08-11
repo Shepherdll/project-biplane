@@ -1,10 +1,15 @@
 import './App.css';
+import React from 'react';
+import Background from './Background';
+import Head from './Head';
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+      <>
+          <Head />
+          <Background />
+          <script src="./script.js"></script>
+      </>
   );
 }
 
