@@ -4,7 +4,7 @@ export default function PlaneImage(props) {
     const planeImage = props.PlaneImage;
 
     return (    
-        <div class="project">
+        <div className="project">
             <img src={ planeImage } alt="img" width="100%"></img>
         </div>
     )

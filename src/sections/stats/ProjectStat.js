@@ -2,11 +2,10 @@ import React from 'react'
 
 export default function ProjectStat(props) {
   const value = props.value;
-  const color = props.color;
 
   return (
-    <div class="project_stat">
-      <p class="project__description" style={{ color: props.color }}>
+    <div className="project_stat" style={{ background: "#dedede"}}>
+      <p className="project__description" style={{ color: props.color, padding: "5px"  }}>
         { value }
       </p>
     </div>

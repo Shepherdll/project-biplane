@@ -66,7 +66,7 @@ export default function Searchbar(props) {
     }
     
     return (
-        <div class="project">
+        <div className="project">
             {/* <h3>{ planeTitle }</h3>
             <br/> */}
             <div>
