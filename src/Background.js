@@ -39,11 +39,31 @@ export default function Background() {
         </main>
 
         <footer class="footer">
+            <p>
+                Website Created by
+            </p>
+            <a
+                href="https://github.com/deuxailes"
+                class="link footer__link"
+            >
+                Maximilian Lambert
+            </a>
+            <br/>
+            <a
+                href="https://github.com/Shepherdll"
+                class="link footer__link"
+            >
+                Peter Shepherd
+            </a>
+            <br/>
+            <p>
+                Base Website Created by
+            </p>
             <a
                 href="https://github.com/rajshekhar26/cleanfolio-minimal"
                 class="link footer__link"
             >
-                Created By Raj Shekhar
+                Raj Shekhar
             </a>
         </footer>
 

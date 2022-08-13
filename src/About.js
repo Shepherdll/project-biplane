@@ -3,7 +3,7 @@ import React from 'react'
 export default function About() {
   return (
     <div class="about center">
-            <h1>Compare planes <span class="about__name">effortlessly.</span></h1>
+            <h1>Compare planes <span class="about__name">easily.</span></h1>
             <p class="about__desc">
             Compare planes side-by-side.
             </p>
