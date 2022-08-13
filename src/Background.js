@@ -1,7 +1,8 @@
 import React from 'react'
 import Header from './Header'
 import About from './About'
-import Projects from './Projects'
+import StatHead from './StatHead'
+import Stats from './Stats'
 
 export default function Background() {
   return (
@@ -9,7 +10,8 @@ export default function Background() {
         <Header />
         <main>
             <About />
-            <Projects />
+            <StatHead />
+            <Stats />
             <section class="section skills" id="skills">
                 <h2 class="section__title">Skills</h2>
                 <ul class="skills__list">
