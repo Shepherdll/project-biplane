@@ -6,10 +6,11 @@ import ProjectLegend from './ProjectLegend'
 import ProjectStat from './ProjectStat'
 
 export default function Stats() {
-    const plane1ABBR = 4.5;
-    const plane2ABBR = 10.5;
-    const plane1RBBR = 4.5;
-    const plane2RBBR = 8.5;
+
+    const statListCombined2 = [
+        {plane1: 4.5, statLegend: "BR (AB)", plane2: 44.5},
+        {plane1: 4.5, statLegend: "BR (RB)", plane2: 3334.5}
+    ];
 
     const evalNumber = (num1, num2) => {
         if (num1 < num2)
@@ -19,21 +20,45 @@ export default function Stats() {
         else
             return "#000000"
     }
+    
+    function firstPlaneStatsOne(statListCombined) {
+        const children = statListCombined.map((val) => (
+            <ProjectStat value={ val.plane1 } color={ evalNumber(val.plane1, val.plane2) }/>
+        ));
+        return (
+            <div class="projects__grid__stats">
+                { children }
+            </div>
+        )
+    }
+    
+    function planeStatLegend(statListCombined) {
+        const children = statListCombined.map((val) => (
+                <ProjectLegend value={ val.statLegend }/>
+            ));
+        return (
+            <div class="projects__grid__legend">
+                { children }
+            </div>
+        )
+    }
+
+    function firstPlaneStatsTwo(statListCombined) {
+        const children = statListCombined.map((val) => (
+            <ProjectStat value={ val.plane2 } color={ evalNumber(val.plane2, val.plane1) }/>
+        ));
+        return (
+            <div class="projects__grid__stats">
+                { children }
+            </div>
+        )
+    }
 
     return (
         <div class="stats">
-            <div class="projects__grid__stats">
-                <ProjectStat value={ plane1ABBR } color={ evalNumber(plane1ABBR, plane2ABBR) }/>
-                <ProjectStat value={ plane1RBBR } color={ evalNumber(plane1RBBR, plane2RBBR) }/>
-            </div>
-            <div class="projects__grid__legend">
-                <ProjectLegend value={ "BR - AB" }/>
-                <ProjectLegend value={ "BR - RB" }/>
-            </div>
-            <div class="projects__grid__stats">
-                <ProjectStat value={ plane2ABBR } color={ evalNumber(plane2ABBR, plane1ABBR) }/>
-                <ProjectStat value={ plane2RBBR } color={ evalNumber(plane2RBBR, plane1RBBR) }/>
-            </div>
+            { firstPlaneStatsOne(statListCombined2) }
+            { planeStatLegend(statListCombined2) }
+            { firstPlaneStatsTwo(statListCombined2) }
         </div>
   )
 }
