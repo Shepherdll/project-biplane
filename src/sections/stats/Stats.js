@@ -1,7 +1,4 @@
 import React from 'react'
-import Project from './Project'
-import Searchbar from './Searchbar'
-import PlaneImage from './PlaneImage'
 import ProjectLegend from './ProjectLegend'
 import ProjectStat from './ProjectStat'
 
@@ -16,7 +13,7 @@ export default function Stats() {
         if (num1 < num2)
             return "#ff0000"
         else if (num1 > num2)
-            return "#00FF00"
+            return "#3fc93f"
         else
             return "#000000"
     }
@@ -26,7 +23,7 @@ export default function Stats() {
             <ProjectStat value={ val.plane1 } color={ evalNumber(val.plane1, val.plane2) }/>
         ));
         return (
-            <div class="projects__grid__stats">
+            <div className="projects__grid__stats">
                 { children }
             </div>
         )
@@ -37,7 +34,7 @@ export default function Stats() {
                 <ProjectLegend value={ val.statLegend }/>
             ));
         return (
-            <div class="projects__grid__legend">
+            <div className="projects__grid__legend">
                 { children }
             </div>
         )
@@ -48,14 +45,14 @@ export default function Stats() {
             <ProjectStat value={ val.plane2 } color={ evalNumber(val.plane2, val.plane1) }/>
         ));
         return (
-            <div class="projects__grid__stats">
+            <div className="projects__grid__stats">
                 { children }
             </div>
         )
     }
 
     return (
-        <div class="stats">
+        <div className="stats">
             { firstPlaneStatsOne(statListCombined2) }
             { planeStatLegend(statListCombined2) }
             { firstPlaneStatsTwo(statListCombined2) }

@@ -1,13 +1,13 @@
 import './App.css';
 import React from 'react';
-import Background from './Background';
-import Head from './Head';
+import Body from './body/Body';
+import Head from './header/Head';
 
 function App() {
   return (
       <>
           <Head />
-          <Background />
+          <Body />
           <script src="./script.js"></script>
       </>
   );
